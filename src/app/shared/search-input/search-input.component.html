@@ -1,0 +1,7 @@
+<div class="wrapper">
+  <div class="form-control-search" [class.has-query]="search?.length">
+    <fa-icon [icon]="faSearch"></fa-icon>
+    <input type="search" class="form-control form-control-filter" spellcheck="false" [placeholder]="placeholder"
+      [formControl]="inputFormControl" [value]="inputFormControl.value">
+  </div>
+</div>

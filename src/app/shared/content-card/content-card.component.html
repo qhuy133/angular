@@ -1,0 +1,21 @@
+<div class="image-card">
+  <div class="card-thumbnail d-flex justify-content-end" [style.background-image]="'url('+(content?.imageUrl)+')'">
+    <div class="like-number">
+      <fa-icon [icon]="faHeart"></fa-icon>
+      <span>{{ content?.like }}</span>
+    </div>
+  </div>
+  <div class="card-infor">
+    <div class="image-infor">
+      <p class="image-name">
+        {{ content?.imageName }}
+      </p>
+      <p class="image-size">
+        {{ content?.resolution }}
+      </p>
+    </div>
+    <div class="user-avatar">
+      <img [src]="content?.avatarUrl" alt="">
+    </div>
+  </div>
+</div>
