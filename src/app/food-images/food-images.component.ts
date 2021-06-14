@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ListContainer } from '../shared/list-container';
-import { BaseModel } from 'src/app/types/model';
+import { FoodImageModel, QueryResult } from 'src/app/types/model';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GetImageService } from '../api/get-image.service';
 
@@ -9,7 +9,7 @@ import { GetImageService } from '../api/get-image.service';
   templateUrl: './food-images.component.html',
   styleUrls: ['./food-images.component.scss']
 })
-export class FoodImagesComponent extends ListContainer<BaseModel> implements OnInit {
+export class FoodImagesComponent extends ListContainer<QueryResult<FoodImageModel>> implements OnInit {
 
   isLoading = true
 

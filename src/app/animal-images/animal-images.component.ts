@@ -3,14 +3,14 @@ import { ActivatedRoute, Router } from '@angular/router'
 import { GetImageService } from 'src/app/api/get-image.service'
 import { ListContainer } from 'src/app/shared/list-container'
 
-import { BaseModel } from 'src/app/types/model'
+import { AnimalModel, QueryResult } from 'src/app/types/model'
 
 @Component({
   selector: 'app-dog-image',
   templateUrl: './animal-images.component.html',
   styleUrls: ['./animal-images.component.scss']
 })
-export class AnimalImagesComponent extends ListContainer<BaseModel> implements OnInit {
+export class AnimalImagesComponent extends ListContainer<QueryResult<AnimalModel>> implements OnInit {
   isLoading = true
   constructor(
     route: ActivatedRoute,
