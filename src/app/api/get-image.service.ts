@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { baseInterface } from '../types/model';
+import { BaseModel } from '../types/model';
 
 @Injectable({
   providedIn: 'root'
@@ -19,11 +19,11 @@ export class GetImageService {
   }
 
   getAnimalImage(params: { page: number, limit: number, search: string }) {
-    return this.httpClient.get<baseInterface>(`${this.baseUrl}/animals`, { params: this.createParams(params) })
+    return this.httpClient.get<BaseModel>(`${this.baseUrl}/animals`, { params: this.createParams(params) })
   }
 
   getFoodImage(params: { page: number, limit: number, search: string }) {
-    return this.httpClient.get<baseInterface>(`${this.baseUrl}/foods`, { params: this.createParams(params) })
+    return this.httpClient.get<BaseModel>(`${this.baseUrl}/foods`, { params: this.createParams(params) })
   }
 
 }

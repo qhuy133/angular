@@ -1,4 +1,4 @@
-export interface baseInterface {
+export interface BaseModel {
   imageUrl: string
   imageName: string
   like: number
